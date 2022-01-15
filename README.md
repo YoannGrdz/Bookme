@@ -246,7 +246,7 @@ As a quote I like goes "Failing to plan is planning to fail."
 
 &nbsp;
 
-I'd like to thank the CS50 and edx team for this excellent course, I can now thanks to all of you envision a future where I can fulfill my dream of being a software developper as well as a digital nomad. 
+I'd like to thank the CS50 and Edx team for this excellent course, I can now thanks to all of you envision a future where I can fulfill my dream of being a software developper as well as a digital nomad. 
 I look back on my first scratch project, and I realize how much I have been able to progress since then, to the point where I am now, writing these lines after having created from zero (from scratch, pun intended) my very own first web application using several languages and a framework while using a real IDE, and having learned so much in the process.
 Thanks from France.
 
