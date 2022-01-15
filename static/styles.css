@@ -1,0 +1,235 @@
+
+
+h1
+{
+    
+    font-family: Pushster;
+    font-weight: bold;
+    color: hsl(258 30% 30%);
+}
+
+
+h2
+{
+    font-family: Pushster;
+    color: white;
+}
+
+h3
+{
+    font-family: Verdana;
+    color: hsl(258 20% 40%);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+/* table ------------------------------------------------------------------ */
+
+table
+{
+    color:hsl(258 20% 40%);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th
+{
+    font-weight: bold;
+    color: white;
+    background-color: hsl(258 20% 40%);
+}
+
+td
+{
+    background-color:hsl(59, 100%, 75%);
+}
+
+/* --------------------------------------------------------------- */
+
+.h1main
+{
+    font-family: Verdana;
+    font-weight: bold;
+    color: white;
+    background-color: hsl(258 20% 40%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.btn-outline-primary
+{
+    border-radius: 10px;
+    border-color: hsl(258 20% 40%);
+    color: hsl(258 20% 40%);
+    font-weight: bold;
+}
+
+.btn-outline-primary:hover
+{
+    background-color: hsl(258 20% 40%);
+    color: white;
+}
+
+.accept_btn
+{
+    background-color: hsl(116 46% 50%);
+    color: white;
+    border-radius: 10px;
+}
+
+.accept_btn 
+{
+    background-color: hsl(116 46% 50%);
+    color: white;
+    border-radius: 10px;
+    padding: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+  
+.accept_btn:hover 
+{
+    background-color: hsl(116 65% 50%);
+}
+
+.refuse_btn
+{
+    background-color: hsl(0 100% 40%);
+    color: white;
+    border-radius: 10px;
+    padding: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+  
+.refuse_btn:hover 
+{
+    background-color: hsl(0 100% 50%);
+}
+
+#a_button
+{
+    background-color: hsl(116 46% 50%);
+    color: white;
+    width:100%
+}
+
+#a_button:hover
+{
+    background-color: hsl(116 65% 50%);
+}
+
+/* navbar ------------------------------------------------------------ */
+
+.custom_nav
+{
+    background-color: hsl(258 20% 40%);
+}
+
+.custom_nav_button
+{
+
+    color: hsl(0 0% 95%);
+}
+
+.custom_nav_button:hover
+{
+    background-color: hsl(258 30% 30%);
+    color: white;
+}
+
+.navbar-brand
+{
+    color: white;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+.navbar-brand:hover
+{
+    color: white;
+}
+
+
+/* events --------------------------------------------------------------- */
+
+.day
+{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: -7px 7px 5px hsla(0, 0%, 30%, 0.3);
+}
+
+.day_date
+{
+    font-weight: bold;
+    font-family: verdana;
+    color: hsl(258 50% 30%);
+}
+
+.event
+{
+    font-weight: 500;
+    background-color: #FFFD82;
+    border-radius: 10px;
+    padding: 5px;
+    color: hsl(258 40% 15%);
+    box-shadow: -3px 3px 5px hsla(0, 0%, 30%, 0.3);
+}
+
+/* ------------------------------------------------------------------------- */
+
+.my_text
+{
+    font-family: verdana;
+    font-weight: 500;
+    color: hsl(258 40% 15%);
+}
+
+.bluebox
+{
+    background-color: hsl(212, 36%, 90%);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: -10px 5px 5px hsla(0, 0%, 30%, 0.3);
+}
+
+#d1
+{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: hsl(258 20% 40%);
+}
+
+.color1
+{
+    background-color: hsl(258 20% 40%);
+}
+
+.color2
+{
+    background-color: hsl(212, 43%, 65%)
+}
+
+.color3
+{
+    background-color: hsl(212, 36%, 90%);
+}
+
+.color4
+{
+    background-color: hsl(59, 100, 75);
+}
+
+.color5
+{
+    background-color: hsl(258 30% 30%);
+}
+
+

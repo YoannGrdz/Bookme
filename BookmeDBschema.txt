@@ -1,0 +1,17 @@
+CREATE TABLE users (id INTEGER,  email TEXT NOT NULL UNIQUE, first_name TEXT NOT NULL, last_name TEXT NOT NULL, hash TEXT NOT NULL, PRIMARY KEY(id));
+
+
+CREATE TABLE events (e_id INTEGER, user_id INTEGER NOT NULL, e_date TEXT NOT NULL, e_start TEXT NOT NULL, e_end TEXT NOT NULL , e_description TEXT NOT NULL, FOREIGN KEY (user_id) REFERENCES users(id), PRIMARY KEY(e_id));
+
+
+CREATE TABLE constraints (user_id INTEGER NOT NULL, c_start TEXT NOT NULL , c_end TEXT NOT NULL, C_type TEXT NOT NULL, FOREIGN KEY (user_id) REFERENCES users(id));
+
+notes : c_type can have 3 possible values : "day_start", "day_end", or "break_time"
+
+
+CREATE TABLE requests (r_id INTEGER NOT NULL, user_email TEXT NOT NULL, contact_email TEXT NOT NULL, FOREIGN KEY (user_email) REFERENCES users(email), FOREIGN KEY (contact_email) REFERENCES users(email), PRIMARY KEY(r_id));
+
+notes : user_email corresponds to the email of the user who sent the request, while contact_email corresponds to the email of the user who received it
+
+
+CREATE TABLE contacts (user_email TEXT NOT NULL, contact_email TEXT NOT NULL, FOREIGN KEY (user_email) REFERENCES users(email), FOREIGN KEY (contact_email) REFERENCES users(email));

@@ -1,0 +1,144 @@
+{% extends "layout2.html" %}
+
+{% block title %}
+    manage calendar
+{% endblock %}
+
+{% block main %}
+<div class="container">
+
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 text-center"><h1>Manage calendar</h1></div>
+        <div class="col2"></div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center"><h2>Add an event</h2></div>
+        <div class="col-3"></div>
+    </div>
+
+    <br>
+    
+    <form action="/manage" method="post">
+
+        <div class="row">
+
+            <div class="col-4">
+                <label for="e_date" class="my_text">Date of the event :</label>
+                <input class="form-control" type="date" name="e_date" required>
+            </div>
+
+            <div class="col-4">
+                <label for="e_start" class="my_text">Starting time :</label>
+                <input class="form-control" type="time" name="e_start" required>
+            </div>
+
+            <div class="col-4">
+                <label for="e_end" class="my_text">Finishing time :</label>
+                <input class="form-control" type="time" name="e_end" required>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <label for="e_description" class="my_text">Event description :</label>
+                <input class="form-control" type="text" name="e_description" required>
+            </div>
+        </div>
+
+        <br>
+
+        <input class="btn btn-outline-primary" type="submit">
+
+        <br>
+    
+    </form>
+    
+    <br>
+    <br>
+    <br>
+
+    <hr>
+    
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center"><h2>Delete an event</h2></div>
+        <div class="col-3"></div>
+    </div>
+    
+    <br>
+
+    <div class="row">
+
+        <div class="col-2"></div>
+
+        <div class="col-8 text-center">
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th></th>
+                </tr>
+                <tr><td class="color3" colspan="6" style="font-weight: bold;">Coming events :</td></tr>
+                {% for row in coming %}
+                    <tr>
+                        <td>{{ row.e_date }}</td>
+                        <td>{{ row.e_description }}</td>
+                        <td>{{ row.e_start }}</td>
+                        <td>{{ row.e_end }}</td>
+                        <td>
+                            <form action="{{ url_for('delete_event', eDelete=row.e_id )}}" method="post">
+                                <input type="submit" value="delete" class="refuse_btn">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr><td class="color3" colspan="6" style="font-weight: bold;">Past events :</td></tr>
+                {% for row in previous %}
+                    <tr>
+                        <td>{{ row.e_date }}</td>
+                        <td>{{ row.e_description }}</td>
+                        <td>{{ row.e_start }}</td>
+                        <td>{{ row.e_end }}</td>
+                        <td>
+                            <form action="{{ url_for('delete_event', eDelete=row.e_id )}}" method="post">
+                                <input type="submit" value="delete" class="refuse_btn">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+    
+            </table>
+        </div>
+
+        <div class="col-2"></div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>   
+
+</div>
+
+{% endblock %}

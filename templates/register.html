@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    register
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="row">
+            <h1 class="h1main">Bookme</h1>
+        </div>
+        <br>
+        <br>
+
+        <div class="color3" id="d1">
+
+            <br>
+            <br>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-4 text-center"><h1>Register</h1></div>
+            </div>
+            <br>
+
+            
+            <form action="/register" method="post">
+
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-4">
+                        <input class="form-control" type="text" name="first_name" autofocus autocomplete="off" placeholder="first name" required>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-4">
+                        <input class="form-control" type="text" name="last_name" autofocus autocomplete="off" placeholder="last name" required>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-4">
+                        <input class="form-control" type="text" name="email" autofocus autocomplete="off" placeholder="email address" required>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-4">
+                        <input class="form-control" type="password" name="password" autofocus autocomplete="off" placeholder="password" required>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-4">
+                        <input class="form-control" type="password" name="confirm_password" autofocus autocomplete="off" placeholder="confirm password" required>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="d-grid gap-2 col-4">
+                        <button type="submit" class="btn btn-outline-primary">register</button>
+                    </div>
+                </div>
+                
+            </form>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-4">
+                    <hr>
+                </div>
+            </div>
+            
+            <br>
+            <div class="row justify-content-center align-items-center">
+                <div class="d-grid gap-2 col-4 text-center">
+                    <p class="my_text">Already registered ?</p>
+                    <a href="/"><button type="button" class="btn btn-primary" id="a_button">Login</button></a>
+                </div>
+            </div>
+            <br>
+            <br>
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

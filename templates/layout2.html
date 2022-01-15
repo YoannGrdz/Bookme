@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+    <!--The code for this navbar was learned from the following video : https://www.youtube.com/watch?v=akXfF066MY0-->
+
+    
+    <nav class="navbar navbar-expand-md  navbar-dark custom_nav">
+        <div class="container-fluid">
+            <a class="navbar-brand">Bookme</a>
+            <button 
+            class="navbar-toggler collapsed" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#toggleMobileMenu" 
+            aria-controls="toggleMobileMenu" 
+            aria-expanded="false" 
+            aria-table="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav text-center ms-auto">
+                    <li>
+                        <a class="nav-link custom_nav_button" href="/homepage">Homepage</a>
+                    </li>
+                    <li>
+                        <a class="nav-link custom_nav_button" href="/manage">Manage Calendar</a>
+                    </li>
+                    <li>
+                        <a class="nav-link custom_nav_button" href="/availability">Availability</a>
+                    </li>
+                    <li>
+                        <a class="nav-link custom_nav_button" href="/contacts">Contacts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link custom_nav_button" href="/">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+    </nav>
+
+
+    {% block main %}
+    {% endblock %}  
+
+{% endblock %}
+

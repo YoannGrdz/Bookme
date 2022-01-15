@@ -1,0 +1,127 @@
+{% extends "layout2.html" %}
+
+{% block title %}
+    homepage
+{% endblock %}
+
+{% block main %}
+
+    <div class="container">
+
+        <br>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 text-center"><h1> Homepage </h1></div>
+            <div class="col"></div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 text-center"><p class="day_date"> Welcome {{ user_name }}.</p></div>
+            <div class="col"></div>
+        </div>
+        
+        <br>
+
+        <div class="row customCol">
+            <br>
+            <div class="col"></div>
+            <div class="col-6 text-center"><h2>Events today :</h2></div>
+            <div class="col"></div>
+            <br>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 day text-center">
+                <br>
+                <p class="day_date">{{ today_day }}, {{ today_date }}<p>
+                <br>
+                <p class="my_text">{{ message }}</p>
+                <br>
+                {% for row in rows %}
+                    <p class="event">{{ row.e_description }} : from {{ row.e_start }} to {{ row.e_end }} </p>
+                {% endfor %}
+                <br>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="row customCol">
+            <br>
+            <div class="col"></div>
+            <div class="col-6 text-center"><h2>Events this week :</h2></div>
+            <div class="col"></div>
+            <br>
+        </div>
+
+        <br>
+        
+        <div class="row justify-content-center">
+            <br>
+            {% for i in range(7) %}
+            <br>
+            <div class="col-3">
+                <br>
+                <div class="day text-center">
+                    <p class="day_date">{{ week_days[i] }} {{week_dates[i]}}</p>
+                    <br>
+                    {% for event in week_events[i] %}
+                        <p class="event">{{ event.e_description }} : from {{ event.e_start }} to {{ event.e_end }}</p>
+                        <br>
+                    {% endfor %}
+                </div>
+                <br>
+            </div>
+            <br>
+            {% endfor %}
+            <br>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="row customCol">
+            <br>
+            <div class="col"></div>
+            <div class="col-6 text-center"><h2>Events this week :</h2></div>
+            <div class="col"></div>
+            <br>
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center">
+            <br>
+            {% for i in range(7) %}
+            <br>
+            <div class="col-3">
+                <br>
+                <div class="day text-center">
+                    <p class="day_date">{{ week_days[i] }} {{next_week_dates[i]}}</p>
+                    <br>
+                    {% for event in next_week_events[i] %}
+                        <p class="event">{{ event.e_description }} : from {{ event.e_start }} to {{ event.e_end }}</p>
+                        <br>
+                    {% endfor %}
+                </div>
+                <br>
+            </div>
+            <br>
+            {% endfor %}
+            <br>
+        </div>
+        
+    </div>
+    
+{% endblock %}

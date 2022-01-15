@@ -1,0 +1,58 @@
+{% extends "layout2.html" %}
+
+{% block title %}
+    {{contact_email}} 's availability
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 text-center"><h1>{{contact_email}} 's availability</h1></div>
+            <div class="col2"></div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 text-center"><h2>These two weeks :</h2></div>
+            <div class="col2"></div>
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center">
+            <br>
+            {% for i in range(15) %}
+            <br>
+            <div class="col-3">
+                <br>
+                <div class="day text-center">
+                    <p class="day_date">{{ weekdays_list[i] }} {{dates_list[i]}}<p>
+                    <br>
+                    {% for a in availability[i] %}
+                        <p class="event">Available from {{ a.a_start }} to {{ a.a_end }} </p>
+                        <br>
+                    {% endfor %}
+                </div>
+                <br>
+            </div>
+            <br>
+            {% endfor %}
+            <br>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+
+
+
